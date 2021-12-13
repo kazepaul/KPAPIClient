@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,9 +11,13 @@
 		E34236172767548E0080A9C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34236162767548E0080A9C0 /* ContentView.swift */; };
 		E3423619276754900080A9C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3423618276754900080A9C0 /* Assets.xcassets */; };
 		E342361C276754910080A9C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E342361B276754910080A9C0 /* Preview Assets.xcassets */; };
+		FB2B6046AFB9FE6809EB1D2F /* Pods_KPAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D478E1FAD3A7E78648717EC /* Pods_KPAPIClient.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12D94417C2FCE7E653954A40 /* Pods-KPAPIClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KPAPIClient.debug.xcconfig"; path = "Target Support Files/Pods-KPAPIClient/Pods-KPAPIClient.debug.xcconfig"; sourceTree = "<group>"; };
+		391F4481944D83E772957ACC /* Pods-KPAPIClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KPAPIClient.release.xcconfig"; path = "Target Support Files/Pods-KPAPIClient/Pods-KPAPIClient.release.xcconfig"; sourceTree = "<group>"; };
+		7D478E1FAD3A7E78648717EC /* Pods_KPAPIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KPAPIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34236112767548E0080A9C0 /* KPAPIClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KPAPIClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34236142767548E0080A9C0 /* KPAPIClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPAPIClientApp.swift; sourceTree = "<group>"; };
 		E34236162767548E0080A9C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +30,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB2B6046AFB9FE6809EB1D2F /* Pods_KPAPIClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05ABB43EF620B1747A1A10E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D478E1FAD3A7E78648717EC /* Pods_KPAPIClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74DE384D1C52C5FBACD6597A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12D94417C2FCE7E653954A40 /* Pods-KPAPIClient.debug.xcconfig */,
+				391F4481944D83E772957ACC /* Pods-KPAPIClient.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E34236082767548E0080A9C0 = {
 			isa = PBXGroup;
 			children = (
 				E34236132767548E0080A9C0 /* KPAPIClient */,
 				E34236122767548E0080A9C0 /* Products */,
+				74DE384D1C52C5FBACD6597A /* Pods */,
+				05ABB43EF620B1747A1A10E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E342361F276754910080A9C0 /* Build configuration list for PBXNativeTarget "KPAPIClient" */;
 			buildPhases = (
+				C65B212560EDE1AF854A106E /* [CP] Check Pods Manifest.lock */,
 				E342360D2767548E0080A9C0 /* Sources */,
 				E342360E2767548E0080A9C0 /* Frameworks */,
 				E342360F2767548E0080A9C0 /* Resources */,
+				E99EC076F24FD2764F114FE3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -103,7 +130,7 @@
 				};
 			};
 			buildConfigurationList = E342360C2767548E0080A9C0 /* Build configuration list for PBXProject "KPAPIClient" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C65B212560EDE1AF854A106E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KPAPIClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E99EC076F24FD2764F114FE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KPAPIClient/Pods-KPAPIClient-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KPAPIClient/Pods-KPAPIClient-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KPAPIClient/Pods-KPAPIClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E342360D2767548E0080A9C0 /* Sources */ = {
@@ -263,6 +332,7 @@
 		};
 		E3423620276754910080A9C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12D94417C2FCE7E653954A40 /* Pods-KPAPIClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,6 +362,7 @@
 		};
 		E3423621276754910080A9C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 391F4481944D83E772957ACC /* Pods-KPAPIClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
