@@ -2,7 +2,7 @@
 //  KPAPIClientApp.swift
 //  KPAPIClient
 //
-//  Created by Chan, Paul | Paul | RP on 2021/12/13.
+//  Created by Chan, Paul | Paul on 2021/12/13.
 //
 
 import SwiftUI

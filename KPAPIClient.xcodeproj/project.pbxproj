@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,11 @@
 		E34236172767548E0080A9C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34236162767548E0080A9C0 /* ContentView.swift */; };
 		E3423619276754900080A9C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3423618276754900080A9C0 /* Assets.xcassets */; };
 		E342361C276754910080A9C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E342361B276754910080A9C0 /* Preview Assets.xcassets */; };
+		E34236232767583B0080A9C0 /* KPAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34236222767583B0080A9C0 /* KPAPIProtocol.swift */; };
+		E342362527675A460080A9C0 /* KPAPISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E342362427675A460080A9C0 /* KPAPISession.swift */; };
+		E342362727683FAB0080A9C0 /* KanaKanjiObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E342362627683FAB0080A9C0 /* KanaKanjiObject.swift */; };
+		E342362A2768412C0080A9C0 /* KanaKanjiAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34236292768412C0080A9C0 /* KanaKanjiAPIRequest.swift */; };
+		E342362C276852030080A9C0 /* KanaKanjiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E342362B276852030080A9C0 /* KanaKanjiResponse.swift */; };
 		FB2B6046AFB9FE6809EB1D2F /* Pods_KPAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D478E1FAD3A7E78648717EC /* Pods_KPAPIClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +28,12 @@
 		E34236162767548E0080A9C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E3423618276754900080A9C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E342361B276754910080A9C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E34236222767583B0080A9C0 /* KPAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPAPIProtocol.swift; sourceTree = "<group>"; };
+		E342362427675A460080A9C0 /* KPAPISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPAPISession.swift; sourceTree = "<group>"; };
+		E342362627683FAB0080A9C0 /* KanaKanjiObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaKanjiObject.swift; sourceTree = "<group>"; };
+		E34236292768412C0080A9C0 /* KanaKanjiAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaKanjiAPIRequest.swift; sourceTree = "<group>"; };
+		E342362B276852030080A9C0 /* KanaKanjiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaKanjiResponse.swift; sourceTree = "<group>"; };
+		E342362D276860280080A9C0 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,13 +62,13 @@
 				12D94417C2FCE7E653954A40 /* Pods-KPAPIClient.debug.xcconfig */,
 				391F4481944D83E772957ACC /* Pods-KPAPIClient.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		E34236082767548E0080A9C0 = {
 			isa = PBXGroup;
 			children = (
+				E342362D276860280080A9C0 /* MyPlayground.playground */,
 				E34236132767548E0080A9C0 /* KPAPIClient */,
 				E34236122767548E0080A9C0 /* Products */,
 				74DE384D1C52C5FBACD6597A /* Pods */,
@@ -76,10 +87,13 @@
 		E34236132767548E0080A9C0 /* KPAPIClient */ = {
 			isa = PBXGroup;
 			children = (
+				E342362827683FB10080A9C0 /* KanaKanji */,
 				E34236142767548E0080A9C0 /* KPAPIClientApp.swift */,
 				E34236162767548E0080A9C0 /* ContentView.swift */,
 				E3423618276754900080A9C0 /* Assets.xcassets */,
 				E342361A276754910080A9C0 /* Preview Content */,
+				E34236222767583B0080A9C0 /* KPAPIProtocol.swift */,
+				E342362427675A460080A9C0 /* KPAPISession.swift */,
 			);
 			path = KPAPIClient;
 			sourceTree = "<group>";
@@ -90,6 +104,16 @@
 				E342361B276754910080A9C0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E342362827683FB10080A9C0 /* KanaKanji */ = {
+			isa = PBXGroup;
+			children = (
+				E34236292768412C0080A9C0 /* KanaKanjiAPIRequest.swift */,
+				E342362B276852030080A9C0 /* KanaKanjiResponse.swift */,
+				E342362627683FAB0080A9C0 /* KanaKanjiObject.swift */,
+			);
+			path = KanaKanji;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +154,7 @@
 				};
 			};
 			buildConfigurationList = E342360C2767548E0080A9C0 /* Build configuration list for PBXProject "KPAPIClient" */;
-			compatibilityVersion = "Xcode 12.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -207,7 +231,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E34236172767548E0080A9C0 /* ContentView.swift in Sources */,
+				E342362727683FAB0080A9C0 /* KanaKanjiObject.swift in Sources */,
+				E34236232767583B0080A9C0 /* KPAPIProtocol.swift in Sources */,
+				E342362A2768412C0080A9C0 /* KanaKanjiAPIRequest.swift in Sources */,
+				E342362527675A460080A9C0 /* KPAPISession.swift in Sources */,
 				E34236152767548E0080A9C0 /* KPAPIClientApp.swift in Sources */,
+				E342362C276852030080A9C0 /* KanaKanjiResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
