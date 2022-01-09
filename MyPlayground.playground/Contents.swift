@@ -18,3 +18,14 @@ session.request(api: KanaKanjiAPIRequest(text: "きょうはよいてんきで�
             print(error)
     }
 }
+
+// ルビ振り
+session.request(api: RubyFuriAPIRequest(text: "漢字かな交じり文にふりがなを振ること。",
+                                        grade: 5)) { result in
+    switch result {
+        case let .success(model):
+            print(model.description)
+        case let .failure(error):
+            print(error)
+    }
+}

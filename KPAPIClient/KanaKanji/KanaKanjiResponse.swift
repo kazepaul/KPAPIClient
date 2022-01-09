@@ -15,7 +15,7 @@ struct KanaKanjiResponse: Codable, CustomStringConvertible {
     var result: [String: [KanaKanjiObject]]?
     
     var description: String {
-        var desc = "id: \(id)\njsonrpc: \(jsonrpc)\n\n\n"
+        var desc = ""
         if let result = self.result, let kanaKanjiObjArr = result["segment"] {
             for kkObj in kanaKanjiObjArr {
                 desc += kkObj.description + "\n"

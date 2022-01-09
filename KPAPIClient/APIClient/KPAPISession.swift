@@ -43,7 +43,7 @@ open class KPAPISession {
                     }
                     do {
                         let model = try api.decode(from: data)
-                            debugPrint("Success")
+                        debugPrint("\(String(describing: (type(of: T.self)))) request Success")
                         completion(.success(model))
                     } catch {
                         // TODO: Error handling
