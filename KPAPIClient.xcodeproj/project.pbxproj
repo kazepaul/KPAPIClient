@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,8 @@
 		E3423631278B17680080A9C0 /* RubyFuriAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3423630278B17680080A9C0 /* RubyFuriAPIRequest.swift */; };
 		E3423633278B17D00080A9C0 /* RubyFuriResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3423632278B17D00080A9C0 /* RubyFuriResponse.swift */; };
 		E3423635278B194B0080A9C0 /* RubyFuriObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3423634278B194B0080A9C0 /* RubyFuriObject.swift */; };
+		E3423638278B42850080A9C0 /* KanaKanjiAPISampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3423637278B42850080A9C0 /* KanaKanjiAPISampleView.swift */; };
+		E342363A278B53F90080A9C0 /* RubyFuriAPISampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3423639278B53F90080A9C0 /* RubyFuriAPISampleView.swift */; };
 		FB2B6046AFB9FE6809EB1D2F /* Pods_KPAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D478E1FAD3A7E78648717EC /* Pods_KPAPIClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		E3423630278B17680080A9C0 /* RubyFuriAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyFuriAPIRequest.swift; sourceTree = "<group>"; };
 		E3423632278B17D00080A9C0 /* RubyFuriResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyFuriResponse.swift; sourceTree = "<group>"; };
 		E3423634278B194B0080A9C0 /* RubyFuriObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyFuriObject.swift; sourceTree = "<group>"; };
+		E3423637278B42850080A9C0 /* KanaKanjiAPISampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KanaKanjiAPISampleView.swift; path = ../../../../KanaKanjiAPISampleView.swift; sourceTree = "<group>"; };
+		E3423639278B53F90080A9C0 /* RubyFuriAPISampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyFuriAPISampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 				E342362F278B16E70080A9C0 /* RubyFuri */,
 				E34236142767548E0080A9C0 /* KPAPIClientApp.swift */,
 				E34236162767548E0080A9C0 /* ContentView.swift */,
+				E3423636278B42740080A9C0 /* SampleView */,
 				E3423618276754900080A9C0 /* Assets.xcassets */,
 				E342361A276754910080A9C0 /* Preview Content */,
 			);
@@ -141,6 +146,15 @@
 			path = RubyFuri;
 			sourceTree = "<group>";
 		};
+		E3423636278B42740080A9C0 /* SampleView */ = {
+			isa = PBXGroup;
+			children = (
+				E3423637278B42850080A9C0 /* KanaKanjiAPISampleView.swift */,
+				E3423639278B53F90080A9C0 /* RubyFuriAPISampleView.swift */,
+			);
+			path = SampleView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,7 +193,7 @@
 				};
 			};
 			buildConfigurationList = E342360C2767548E0080A9C0 /* Build configuration list for PBXProject "KPAPIClient" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -257,8 +271,10 @@
 			files = (
 				E3423633278B17D00080A9C0 /* RubyFuriResponse.swift in Sources */,
 				E34236172767548E0080A9C0 /* ContentView.swift in Sources */,
+				E3423638278B42850080A9C0 /* KanaKanjiAPISampleView.swift in Sources */,
 				E342362727683FAB0080A9C0 /* KanaKanjiObject.swift in Sources */,
 				E34236232767583B0080A9C0 /* KPAPIProtocol.swift in Sources */,
+				E342363A278B53F90080A9C0 /* RubyFuriAPISampleView.swift in Sources */,
 				E342362A2768412C0080A9C0 /* KanaKanjiAPIRequest.swift in Sources */,
 				E342362527675A460080A9C0 /* KPAPISession.swift in Sources */,
 				E34236152767548E0080A9C0 /* KPAPIClientApp.swift in Sources */,
@@ -403,7 +419,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -433,7 +449,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

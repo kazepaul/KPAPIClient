@@ -14,7 +14,7 @@ enum APIError: Error {
     case unknown
 }
 
-open class KPAPISession {
+open class KPAPISession: ObservableObject {
     private let session: Session
     
     public init(session: Session) {
