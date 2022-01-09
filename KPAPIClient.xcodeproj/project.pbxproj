@@ -16,6 +16,9 @@
 		E342362727683FAB0080A9C0 /* KanaKanjiObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E342362627683FAB0080A9C0 /* KanaKanjiObject.swift */; };
 		E342362A2768412C0080A9C0 /* KanaKanjiAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34236292768412C0080A9C0 /* KanaKanjiAPIRequest.swift */; };
 		E342362C276852030080A9C0 /* KanaKanjiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E342362B276852030080A9C0 /* KanaKanjiResponse.swift */; };
+		E3423631278B17680080A9C0 /* RubyFuriAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3423630278B17680080A9C0 /* RubyFuriAPIRequest.swift */; };
+		E3423633278B17D00080A9C0 /* RubyFuriResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3423632278B17D00080A9C0 /* RubyFuriResponse.swift */; };
+		E3423635278B194B0080A9C0 /* RubyFuriObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3423634278B194B0080A9C0 /* RubyFuriObject.swift */; };
 		FB2B6046AFB9FE6809EB1D2F /* Pods_KPAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D478E1FAD3A7E78648717EC /* Pods_KPAPIClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +37,9 @@
 		E34236292768412C0080A9C0 /* KanaKanjiAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaKanjiAPIRequest.swift; sourceTree = "<group>"; };
 		E342362B276852030080A9C0 /* KanaKanjiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaKanjiResponse.swift; sourceTree = "<group>"; };
 		E342362D276860280080A9C0 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		E3423630278B17680080A9C0 /* RubyFuriAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyFuriAPIRequest.swift; sourceTree = "<group>"; };
+		E3423632278B17D00080A9C0 /* RubyFuriResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyFuriResponse.swift; sourceTree = "<group>"; };
+		E3423634278B194B0080A9C0 /* RubyFuriObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyFuriObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,13 +93,13 @@
 		E34236132767548E0080A9C0 /* KPAPIClient */ = {
 			isa = PBXGroup;
 			children = (
+				E342362E278B16D50080A9C0 /* APIClient */,
 				E342362827683FB10080A9C0 /* KanaKanji */,
+				E342362F278B16E70080A9C0 /* RubyFuri */,
 				E34236142767548E0080A9C0 /* KPAPIClientApp.swift */,
 				E34236162767548E0080A9C0 /* ContentView.swift */,
 				E3423618276754900080A9C0 /* Assets.xcassets */,
 				E342361A276754910080A9C0 /* Preview Content */,
-				E34236222767583B0080A9C0 /* KPAPIProtocol.swift */,
-				E342362427675A460080A9C0 /* KPAPISession.swift */,
 			);
 			path = KPAPIClient;
 			sourceTree = "<group>";
@@ -114,6 +120,25 @@
 				E342362627683FAB0080A9C0 /* KanaKanjiObject.swift */,
 			);
 			path = KanaKanji;
+			sourceTree = "<group>";
+		};
+		E342362E278B16D50080A9C0 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				E34236222767583B0080A9C0 /* KPAPIProtocol.swift */,
+				E342362427675A460080A9C0 /* KPAPISession.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		E342362F278B16E70080A9C0 /* RubyFuri */ = {
+			isa = PBXGroup;
+			children = (
+				E3423630278B17680080A9C0 /* RubyFuriAPIRequest.swift */,
+				E3423632278B17D00080A9C0 /* RubyFuriResponse.swift */,
+				E3423634278B194B0080A9C0 /* RubyFuriObject.swift */,
+			);
+			path = RubyFuri;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,12 +255,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3423633278B17D00080A9C0 /* RubyFuriResponse.swift in Sources */,
 				E34236172767548E0080A9C0 /* ContentView.swift in Sources */,
 				E342362727683FAB0080A9C0 /* KanaKanjiObject.swift in Sources */,
 				E34236232767583B0080A9C0 /* KPAPIProtocol.swift in Sources */,
 				E342362A2768412C0080A9C0 /* KanaKanjiAPIRequest.swift in Sources */,
 				E342362527675A460080A9C0 /* KPAPISession.swift in Sources */,
 				E34236152767548E0080A9C0 /* KPAPIClientApp.swift in Sources */,
+				E3423631278B17680080A9C0 /* RubyFuriAPIRequest.swift in Sources */,
+				E3423635278B194B0080A9C0 /* RubyFuriObject.swift in Sources */,
 				E342362C276852030080A9C0 /* KanaKanjiResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
