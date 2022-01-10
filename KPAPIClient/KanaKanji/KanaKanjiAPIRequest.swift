@@ -10,6 +10,122 @@ import Alamofire
 
 fileprivate let appid = "dj00aiZpPXdYRDUyT0dJeWd3VSZzPWNvbnN1bWVyc2VjcmV0Jng9YmM-"
 
+enum KanaKanjiFormat: String, CustomStringConvertible, CaseIterable {
+    case hiragana
+    case roman
+    
+    var title: String {
+        switch self {
+        case .hiragana:
+            return "ひらがな"
+        case .roman:
+            return "ローマ字"
+        }
+    }
+    
+    var description: String {
+        switch self {
+        case .hiragana:
+            return "かな漢字変換の対象となるテキストはひらがなのみとなります"
+        case .roman:
+            return "リクエストされたテキスト情報中のひらがなと半角英小文字が変換対象となります"
+        }
+    }
+}
+
+enum KanaKanjiMode: String, CustomStringConvertible, CaseIterable {
+    case kanakanji
+    case roman
+    case predictive
+    
+    var description: String {
+        switch self {
+        case .kanakanji:
+            return "通常の変換候補を返す通常変換を行います"
+        case .roman:
+            return "ローマ字からひらがなに変換した結果のみを返すローマ字変換を行います"
+        case .predictive:
+            return "推測変換の候補を返します"
+        }
+    }
+}
+
+enum KanaKanjiOption: String, CustomStringConvertible, CaseIterable {
+    case hiragana
+    case katakana
+    case alphanumeric
+    case half_katakana
+    case half_alphanumeric
+    
+    var title: String {
+        switch self {
+        case .hiragana:
+            return "全角ひらがな"
+        case .katakana:
+            return "全角カタカナ"
+        case .alphanumeric:
+            return "英数字"
+        case .half_katakana:
+            return "半角カタカナ"
+        case .half_alphanumeric:
+            return "半角英数字"
+        }
+    }
+    
+    var description: String {
+        switch self {
+        case .hiragana:
+            return "全角ひらがな変換の内容をHiraganaに返します"
+        case .katakana:
+            return "全角カタカナ変換の内容をKatakanaに返します"
+        case .alphanumeric:
+            return "全角英数字変換の内容をAlphanumericに返します"
+        case .half_katakana:
+            return "半角カタカナ変換の内容をHalfKatakanaに返します"
+        case .half_alphanumeric:
+            return "半角英数字変換の内容をHalfAlphanumericに返します"
+        }
+    }
+}
+
+enum KanaKanjiDictionary: String, CustomStringConvertible, CaseIterable {
+    case base
+    case name
+    case place
+    case zip
+    case symbol
+    
+    var title: String {
+        switch self {
+        case .base:
+            return "一般"
+        case .name:
+            return "人名"
+        case .place:
+            return "地名"
+        case .zip:
+            return "郵便番号"
+        case .symbol:
+            return "顔文字、記号"
+        }
+    }
+    
+    var description: String {
+        switch self {
+        case .base:
+            return "一般辞書の候補を返します"
+        case .name:
+            return "人名辞書の候補を返します"
+        case .place:
+            return "地名辞書の候補を返します"
+        case .zip:
+            return "郵便番号辞書の候補を返します"
+        case .symbol:
+            return "顔文字、記号辞書の候補を返します"
+        }
+    }
+}
+
 struct KanaKanjiAPIRequest: KPAPIProtocol {
     typealias Model = KanaKanjiResponse
     
@@ -69,12 +185,12 @@ struct KanaKanjiAPIRequest: KPAPIProtocol {
         return requestParams
     }
     
-    init(text q: String, format: String? = nil, mode: String? = nil, option: [String]? = nil, dictionary: [String]? = nil, result: Int? = nil) {
+    init(text q: String, format: KanaKanjiFormat? = nil, mode: KanaKanjiMode? = nil, option: [KanaKanjiOption]? = nil, dictionary: [KanaKanjiDictionary]? = nil, result: Int? = nil) {
         self.q = q
-        self.format = format
-        self.mode = mode
-        self.option = option
-        self.dictionary = dictionary
+        self.format = format?.rawValue
+        self.mode = mode?.rawValue
+        self.option = option?.map{ $0.rawValue }
+        self.dictionary = dictionary?.map { $0.rawValue }
         self.result = result
     }
 }
