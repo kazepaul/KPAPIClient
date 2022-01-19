@@ -8,7 +8,7 @@
 import Foundation
 
 struct RubyFuriObject: Codable, CustomStringConvertible {
-    var word:[RubyFuriWordObject]
+    var word: [RubyFuriWord]
     
     var description: String {
         var desc = ""
@@ -19,11 +19,11 @@ struct RubyFuriObject: Codable, CustomStringConvertible {
     }
 }
 
-struct RubyFuriWordObject: Codable, CustomStringConvertible {
+struct RubyFuriWord: Codable, CustomStringConvertible {
     var surface: String
     var furigana: String?
     var roman: String?
-    var subword: [RubyFuriWordObject]?
+    var subword: [RubyFuriSubWord]?
     
     var description: String {
         var desc = "表記: \(surface)\n"
@@ -39,7 +39,23 @@ struct RubyFuriWordObject: Codable, CustomStringConvertible {
                 desc.append("\($0)\n")
             }
         }
-        
+        return desc
+    }
+}
+
+struct RubyFuriSubWord: Codable, CustomStringConvertible {
+    var surface: String
+    var furigana: String?
+    var roman: String?
+    
+    var description: String {
+        var desc = "\t表記: \(surface)\n"
+        if let furigana = furigana {
+            desc.append("\tふりがな: \(furigana)\n")
+        }
+        if let roman = roman {
+            desc.append("\tローマ字: \(roman)\n")
+        }
         return desc
     }
 }

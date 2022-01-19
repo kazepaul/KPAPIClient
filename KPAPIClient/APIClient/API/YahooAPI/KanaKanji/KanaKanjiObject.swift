@@ -8,6 +8,18 @@
 import Foundation
 
 struct KanaKanjiObject: Codable, CustomStringConvertible {
+    let segment: [KanaKanjiSegment]
+    
+    var description: String {
+        var desc = ""
+        segment.forEach {
+            desc.append("\($0)\n")
+        }
+        return desc
+    }
+}
+
+struct KanaKanjiSegment: Codable, CustomStringConvertible {
     var reading: String?
     var hiragana: String?
     var katakana: String?
@@ -39,7 +51,6 @@ struct KanaKanjiObject: Codable, CustomStringConvertible {
         if let candidate = self.candidate {
             desc += "変換候補: \(candidate)\n"
         }
-        
         return desc
     }
 }

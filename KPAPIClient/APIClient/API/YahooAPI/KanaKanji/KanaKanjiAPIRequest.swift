@@ -8,8 +8,6 @@
 import Foundation
 import Alamofire
 
-fileprivate let appid = "dj00aiZpPXdYRDUyT0dJeWd3VSZzPWNvbnN1bWVyc2VjcmV0Jng9YmM-"
-
 enum KanaKanjiFormat: String, CustomStringConvertible, CaseIterable {
     case hiragana
     case roman
@@ -137,7 +135,7 @@ struct KanaKanjiAPIRequest: KPAPIProtocol {
     var result: Int?
     
     var baseURL: String {
-        return "https://jlp.yahooapis.jp/"
+        return YahooAPIConstraint.baseURL
     }
     
     var path: String {
@@ -150,7 +148,7 @@ struct KanaKanjiAPIRequest: KPAPIProtocol {
     
     var headers: HTTPHeaders {
         return ["Content-Type": "application/json",
-                "User-Agent": "Yahoo AppID:\(appid)"]
+                "User-Agent": "Yahoo AppID:\(YahooAPIConstraint.appid)"]
     }
     
     var encoding: ParameterEncoding {
@@ -158,7 +156,7 @@ struct KanaKanjiAPIRequest: KPAPIProtocol {
     }
     
     var parameters: [String: Any] {
-        var requestParams:[String: Any] = ["appid": appid,
+        var requestParams:[String: Any] = ["appid": YahooAPIConstraint.appid,
                                            "id": "aaaa",
                                            "jsonrpc": "2.0",
                                            "method": "jlp.jimservice.conversion"]

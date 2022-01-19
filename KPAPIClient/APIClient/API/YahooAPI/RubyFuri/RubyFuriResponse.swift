@@ -7,12 +7,18 @@
 
 import Foundation
 
+struct RubyFuriResponseError: Codable {
+    var code: Int
+    var message: String
+}
+
 struct RubyFuriResponse: Codable, CustomStringConvertible {
     typealias Model = RubyFuriResponse
     
     var id: String
     var jsonrpc: String
     var result: RubyFuriObject?
+    var error: RubyFuriResponseError?
     
     var description: String {
         var desc = ""

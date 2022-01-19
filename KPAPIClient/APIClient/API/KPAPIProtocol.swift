@@ -16,17 +16,10 @@ protocol KPAPIProtocol {
     var headers: HTTPHeaders { get }
     var parameters: [String: Any] { get }
     var encoding: ParameterEncoding { get }
-    func decode(from data: Data) throws -> Model
 }
 
 extension KPAPIProtocol {
     func getAPIRequestURL() -> URL? {
         return URL(string: baseURL)?.appendingPathComponent(path)
-    }
-    
-    func decode(from data: Data) throws -> Model {
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        return try decoder.decode(Model.self, from: data)
     }
 }
