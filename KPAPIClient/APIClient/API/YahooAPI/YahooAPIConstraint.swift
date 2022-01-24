@@ -9,5 +9,5 @@ import Foundation
 
 public final class YahooAPIConstraint {
     public static let appid = "dj00aiZpPXdYRDUyT0dJeWd3VSZzPWNvbnN1bWVyc2VjcmV0Jng9YmM-"
-    public static let baseURL = "https://jlp.yahooapis.jp/-"
+    public static let baseURL = "https://jlp.yahooapis.jp/"
 }
