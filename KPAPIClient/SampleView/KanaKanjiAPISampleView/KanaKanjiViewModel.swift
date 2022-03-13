@@ -56,7 +56,7 @@ class KanaKanjiViewModel: ObservableObject {
 
     var bag = Set<AnyCancellable>()
     
-    func fetch() {
+    func fetch(completionHandler: ((Subscribers.Completion<APIError>) -> ())? = nil) {
         status = .Loading
         
         let api = KanaKanjiAPIRequest(text: textToAPI,
@@ -83,6 +83,7 @@ class KanaKanjiViewModel: ObservableObject {
                     self.error = error
                     self.status = .APIFailure
                 }
+                completionHandler?(result)
             } receiveValue: { response in
                 self.response = response
             }

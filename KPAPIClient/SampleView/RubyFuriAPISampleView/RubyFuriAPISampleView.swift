@@ -47,7 +47,7 @@ struct RubyFuriAPISampleView: View {
                     Button("送信") {
                         hideKeyboard()
                         if !viewModel.textToAPI.isEmpty {
-                            viewModel.fetchRubyFuriResult()
+                            viewModel.fetch()
                         }
                     }
                     .frame(minWidth: 70, minHeight: 30)

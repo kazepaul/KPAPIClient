@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E308E47627DE0DE800846620 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E308E47527DE0DE800846620 /* APIError.swift */; };
 		E34236152767548E0080A9C0 /* KPAPIClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34236142767548E0080A9C0 /* KPAPIClientApp.swift */; };
 		E34236172767548E0080A9C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34236162767548E0080A9C0 /* ContentView.swift */; };
 		E3423619276754900080A9C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3423618276754900080A9C0 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		E3423633278B17D00080A9C0 /* RubyFuriResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3423632278B17D00080A9C0 /* RubyFuriResponse.swift */; };
 		E3423635278B194B0080A9C0 /* RubyFuriObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3423634278B194B0080A9C0 /* RubyFuriObject.swift */; };
 		E342363A278B53F90080A9C0 /* RubyFuriAPISampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3423639278B53F90080A9C0 /* RubyFuriAPISampleView.swift */; };
+		E3505B3E27A2930100D11FB4 /* KPAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3505B3D27A2930100D11FB4 /* KPAPIClientTests.swift */; };
 		E3B7EB1F278C853900091EC2 /* KanaKanjiAPISampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7EB1E278C853900091EC2 /* KanaKanjiAPISampleView.swift */; };
 		E3B7EB4927903C5200091EC2 /* KanaKanjiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7EB4827903C5200091EC2 /* KanaKanjiViewModel.swift */; };
 		E3B7EB4B27904B4300091EC2 /* RubyFuriViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7EB4A27904B4300091EC2 /* RubyFuriViewModel.swift */; };
@@ -29,10 +31,21 @@
 		FB2B6046AFB9FE6809EB1D2F /* Pods_KPAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D478E1FAD3A7E78648717EC /* Pods_KPAPIClient.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E3505B3F27A2930100D11FB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E34236092767548E0080A9C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E34236102767548E0080A9C0;
+			remoteInfo = KPAPIClient;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		12D94417C2FCE7E653954A40 /* Pods-KPAPIClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KPAPIClient.debug.xcconfig"; path = "Target Support Files/Pods-KPAPIClient/Pods-KPAPIClient.debug.xcconfig"; sourceTree = "<group>"; };
 		391F4481944D83E772957ACC /* Pods-KPAPIClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KPAPIClient.release.xcconfig"; path = "Target Support Files/Pods-KPAPIClient/Pods-KPAPIClient.release.xcconfig"; sourceTree = "<group>"; };
 		7D478E1FAD3A7E78648717EC /* Pods_KPAPIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KPAPIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E308E47527DE0DE800846620 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		E34236112767548E0080A9C0 /* KPAPIClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KPAPIClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34236142767548E0080A9C0 /* KPAPIClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPAPIClientApp.swift; sourceTree = "<group>"; };
 		E34236162767548E0080A9C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +61,8 @@
 		E3423632278B17D00080A9C0 /* RubyFuriResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyFuriResponse.swift; sourceTree = "<group>"; };
 		E3423634278B194B0080A9C0 /* RubyFuriObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyFuriObject.swift; sourceTree = "<group>"; };
 		E3423639278B53F90080A9C0 /* RubyFuriAPISampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyFuriAPISampleView.swift; sourceTree = "<group>"; };
+		E3505B3B27A2930100D11FB4 /* KPAPIClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KPAPIClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3505B3D27A2930100D11FB4 /* KPAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPAPIClientTests.swift; sourceTree = "<group>"; };
 		E3B7EB1E278C853900091EC2 /* KanaKanjiAPISampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaKanjiAPISampleView.swift; sourceTree = "<group>"; };
 		E3B7EB4827903C5200091EC2 /* KanaKanjiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaKanjiViewModel.swift; sourceTree = "<group>"; };
 		E3B7EB4A27904B4300091EC2 /* RubyFuriViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyFuriViewModel.swift; sourceTree = "<group>"; };
@@ -62,6 +77,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB2B6046AFB9FE6809EB1D2F /* Pods_KPAPIClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3505B3827A2930100D11FB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,11 +107,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E308E47427DE0DD500846620 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				E308E47527DE0DE800846620 /* APIError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		E34236082767548E0080A9C0 = {
 			isa = PBXGroup;
 			children = (
 				E342362D276860280080A9C0 /* MyPlayground.playground */,
 				E34236132767548E0080A9C0 /* KPAPIClient */,
+				E3505B3C27A2930100D11FB4 /* KPAPIClientTests */,
 				E34236122767548E0080A9C0 /* Products */,
 				74DE384D1C52C5FBACD6597A /* Pods */,
 				05ABB43EF620B1747A1A10E9 /* Frameworks */,
@@ -100,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				E34236112767548E0080A9C0 /* KPAPIClient.app */,
+				E3505B3B27A2930100D11FB4 /* KPAPIClientTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,11 +196,20 @@
 			path = SampleView;
 			sourceTree = "<group>";
 		};
+		E3505B3C27A2930100D11FB4 /* KPAPIClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				E3505B3D27A2930100D11FB4 /* KPAPIClientTests.swift */,
+			);
+			path = KPAPIClientTests;
+			sourceTree = "<group>";
+		};
 		E3B7EB472790366100091EC2 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				E34236222767583B0080A9C0 /* KPAPIProtocol.swift */,
 				E342362427675A460080A9C0 /* KPAPISession.swift */,
+				E308E47427DE0DD500846620 /* Error */,
 				E3B7EB5427982C4000091EC2 /* YahooAPI */,
 			);
 			path = API;
@@ -240,6 +281,24 @@
 			productReference = E34236112767548E0080A9C0 /* KPAPIClient.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E3505B3A27A2930100D11FB4 /* KPAPIClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3505B4327A2930100D11FB4 /* Build configuration list for PBXNativeTarget "KPAPIClientTests" */;
+			buildPhases = (
+				E3505B3727A2930100D11FB4 /* Sources */,
+				E3505B3827A2930100D11FB4 /* Frameworks */,
+				E3505B3927A2930100D11FB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3505B4027A2930100D11FB4 /* PBXTargetDependency */,
+			);
+			name = KPAPIClientTests;
+			productName = KPAPIClientTests;
+			productReference = E3505B3B27A2930100D11FB4 /* KPAPIClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -252,6 +311,10 @@
 				TargetAttributes = {
 					E34236102767548E0080A9C0 = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					E3505B3A27A2930100D11FB4 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = E34236102767548E0080A9C0;
 					};
 				};
 			};
@@ -269,6 +332,7 @@
 			projectRoot = "";
 			targets = (
 				E34236102767548E0080A9C0 /* KPAPIClient */,
+				E3505B3A27A2930100D11FB4 /* KPAPIClientTests */,
 			);
 		};
 /* End PBXProject section */
@@ -280,6 +344,13 @@
 			files = (
 				E342361C276754910080A9C0 /* Preview Assets.xcassets in Resources */,
 				E3423619276754900080A9C0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3505B3927A2930100D11FB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,10 +420,27 @@
 				E3B7EB5627982F8600091EC2 /* YahooAPIConstraint.swift in Sources */,
 				E342362C276852030080A9C0 /* KanaKanjiResponse.swift in Sources */,
 				E3B7EB4B27904B4300091EC2 /* RubyFuriViewModel.swift in Sources */,
+				E308E47627DE0DE800846620 /* APIError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3505B3727A2930100D11FB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3505B3E27A2930100D11FB4 /* KPAPIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E3505B4027A2930100D11FB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E34236102767548E0080A9C0 /* KPAPIClient */;
+			targetProxy = E3505B3F27A2930100D11FB4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E342361D276754910080A9C0 /* Debug */ = {
@@ -531,6 +619,50 @@
 			};
 			name = Release;
 		};
+		E3505B4127A2930100D11FB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = KazePaul.KPAPIClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KPAPIClient.app/KPAPIClient";
+			};
+			name = Debug;
+		};
+		E3505B4227A2930100D11FB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = KazePaul.KPAPIClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KPAPIClient.app/KPAPIClient";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -548,6 +680,15 @@
 			buildConfigurations = (
 				E3423620276754910080A9C0 /* Debug */,
 				E3423621276754910080A9C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3505B4327A2930100D11FB4 /* Build configuration list for PBXNativeTarget "KPAPIClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3505B4127A2930100D11FB4 /* Debug */,
+				E3505B4227A2930100D11FB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

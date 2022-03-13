@@ -25,7 +25,7 @@ class RubyFuriViewModel: ObservableObject {
 
     var bag = Set<AnyCancellable>()
     
-    func fetchRubyFuriResult() {
+    func fetch(completionHandler: ((Subscribers.Completion<APIError>) -> ())? = nil) {
         status = .Loading
         let api = RubyFuriAPIRequest(text: textToAPI, grade: RubyFuriGrade.allCases[gradeSelection].rawValue)
         KPAPISession.shared.request(api: api)
@@ -47,6 +47,7 @@ class RubyFuriViewModel: ObservableObject {
                     self.error = error
                     self.status = .APIFailure
                 }
+                completionHandler?(result)
             } receiveValue: { response in
                 self.response = response
                 self.error = nil
